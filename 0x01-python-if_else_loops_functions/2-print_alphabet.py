@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-import string
-for alphabet in string.ascii_lowercase:
-    print(alphabet, end ="")
+for alphabet in range(97, 123):
+    print(chr(alphabet), end ="")
