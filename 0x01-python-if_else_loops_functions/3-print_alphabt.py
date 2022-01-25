@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-print(*["%c" % a for a in range(ord('a'),ord('z')+1) if "%c" % a not in 'qe'],sep='',end='')
+for alpha_letters in range(97, 122):
+    if alpha_letters == ord(e) or alpha_letters == ord(q):
+        continue
+    print("{:c}".format(alpha_letters), end="")
