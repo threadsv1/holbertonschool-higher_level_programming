@@ -13,7 +13,8 @@ def roman_to_int(roman_string):
         i = 0
         tot = 0
         while i < len(roman_string):
-            if i + 1 < len(roman_string) and roman_string[i: i + 2] in R:
+            if i + 1 < len(roman_string) and\
+                    roman_string[i: i + 2] in R:
                 tot += R[roman_string[i: i + 2]]
                 i += 2
             else:
