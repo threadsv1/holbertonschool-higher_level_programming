@@ -15,10 +15,12 @@ class Square:
     def area(self):
         """ returns area of a square """
         return self.__size**2
+
     @property
     def size(self):
         """ returns size variable of Square class instance """
         return self.__size
+
     @size.setter
     def size(self, value):
         """ sets size variable of Square class instance """
