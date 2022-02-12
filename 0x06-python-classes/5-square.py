@@ -32,6 +32,7 @@ class Square:
         """ Print a square from the size using ## """
         if self.__size == 0:
             print()
+
         else:
             for i in range(1, self.__size + 1):
                 for j in range(1, self.__size + 1):
