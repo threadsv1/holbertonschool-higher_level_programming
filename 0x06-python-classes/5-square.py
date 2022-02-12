@@ -13,10 +13,12 @@ class Square:
     def area(self):
         """ Set square area """
         return self.__size ** 2
+
     @property
     def size(self):
         """ Getter of size """
         return self.__size
+
     @size.setter
     def size(self, value):
         """ Setter of size """
