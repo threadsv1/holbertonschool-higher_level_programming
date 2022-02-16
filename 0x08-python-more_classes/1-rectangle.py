@@ -17,8 +17,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """
-        Init method to construct a rectangle
-        """
+           Init method to construct a rectangle
+           """
         self.height = height
         self.width = width
 
@@ -28,6 +28,7 @@ class Rectangle:
         width getter
         """
         return (self.__width)
+
     @width.setter
     def width(self, value):
         """
