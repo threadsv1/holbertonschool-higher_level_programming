@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 def add_integer(a, b=98):
+"""
+Integers Addition Module
+"""
     if type(a) not in [int, float]:
         raise TypeError("a must be an integr")
     if type(b) not in [int, float]:
