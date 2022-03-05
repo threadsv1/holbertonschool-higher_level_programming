@@ -1,27 +1,15 @@
 #!/usr/bin/python3
 """
-  Text indentation module
+module to remove whitespace and add newlines to text
 """
 
 
 def text_indentation(text):
-    """
-    prints two lines after each of these characters: ., ?, :
-    Args:
-        text(string): the text to indent
-    Raises:
-        TypeError: if text is not string
-    Returns:
-        None
-    """
-    if type(text) is not str:
-        raise TypeError("text must be a string")
-    l = 0
-    while l < len(text):
-        if text[l] in [':', '.', '?']:
-            print(text[l])
-            print()
-            l += 1
-        else:
-            print(text[l], end='')
-        l += 1
+    """ removes whitespace at start & end of each line and adds newlines"""
+    if not isinstance(text, str):
+        raise TypeError('text must be a string')
+    for c in ['.', '?', ':']:
+        text = text.replace(c, c + '\n\n')
+    new = [line.strip() for line in text.split('\n')]
+    new = '\n'.join(new)
+    print(new, end='')
