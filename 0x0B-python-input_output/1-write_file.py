@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-'''
-number_of_lines function
+'''Write a text to a file
 '''
 
 
-def number_of_lines(filename=""):
-    '''
-    returns the number of lines of a text file
+def write_file(filename="", text=""):
+    '''Write to a file using with
     '''
     with open(filename, 'r', encoding='utf8') as f:
         i = 0
