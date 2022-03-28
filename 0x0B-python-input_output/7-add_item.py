@@ -3,14 +3,17 @@
 
 
 import sys
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
+filename = "add_item.json"
 args = sys.argv[1:]
-with open('add_item.json', 'a') as file:
+
+if __name__ == '__main__':
     try:
-        txt = load_from_json_file('add_item.json')
-    except:
-        txt = []
-    txt += args
-    save_to_json_file(l, 'add_item.json')
+        my_list = load_from_json_file(filename)
+    except FileNotFoundError:
+        my_list = []
+
+    my_list.extend(args)
+    save_to_json_file(my_list, filename)
