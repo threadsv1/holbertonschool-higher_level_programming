@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-number of lines function
+number_of_lines function
 """
 
 
