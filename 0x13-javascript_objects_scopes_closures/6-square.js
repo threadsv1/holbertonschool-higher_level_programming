@@ -1,20 +1,14 @@
 #!/usr/bin/node
+const Square1 = require('./5-square.js');
 
-const csquare = require('./5-square');
-
-class Square extends csquare {
+module.exports = class Square extends Square1 {
   charPrint (c) {
     if (c === undefined) {
       this.print();
     } else {
-      let k = '';
       for (let i = 0; i < this.width; i++) {
-        k += c;
-      }
-      for (let i = 0; i < this.height; i++) {
-        console.log(k);
+        console.log(c.repeat(this.height));
       }
     }
   }
-}
-module.exports = Square;
+};
