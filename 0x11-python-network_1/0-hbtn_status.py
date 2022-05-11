@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-url = "https://intranet.hbtn.io/status"
-
-request_response = requests.head(url)
-status_code = request_response.status_code
-website_is_up = status_code == 200
-
-print(website_is_up)
+"""
+fetches https://intranet.hbtn.io/status
+"""
+if __name__ == "__main__":
+    import urllib.request as request
+    with request.urlopen('https://intranet.hbtn.io/status') as r:
+        html = r.read()
+        print('Body response:')
+        print("\t- type: {}".format(type(html)))
+        print("\t- content: {}".format(html))
+        print("\t- utf8 content: {}".format(html.decode('utf-8')))
