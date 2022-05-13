@@ -6,3 +6,4 @@ if (arg === undefined) {
 } else {
   console.log(arg);
 }
+
